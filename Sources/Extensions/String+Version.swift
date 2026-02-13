@@ -26,8 +26,10 @@ public extension VersionString {
         return result
     }
 
+    // periphery:ignore
     func isVersion(equalTo targetVersion: String) -> Bool { compare(toVersion: targetVersion) == .orderedSame }
     func isVersion(greaterThan targetVersion: String) -> Bool { compare(toVersion: targetVersion) == .orderedDescending }
+    // periphery:ignore
     func isVersion(greaterThanOrEqualTo targetVersion: String) -> Bool { compare(toVersion: targetVersion) != .orderedAscending }
     func isVersion(lessThan targetVersion: String) -> Bool { compare(toVersion: targetVersion) == .orderedAscending }
     func isVersion(lessThanOrEqualTo targetVersion: String) -> Bool { compare(toVersion: targetVersion) != .orderedDescending }
